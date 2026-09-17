@@ -1,0 +1,40 @@
+/*Class selectors */
+.box{
+    border: 1px solid #ccccccfd;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #989696;
+    box-sizing: content-box;
+    font-family: Arial, sans-serif;
+}
+
+.box h2{
+    margin-top: 0px;
+    text-align:center;
+    font-family: Arial, sans-serif;
+}
+.framedImage{
+    padding: 10px;
+    margin: 0px;
+    max-width: 100%;
+    float: left;
+}
+
+/*ID selectors */
+#main-header { 
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+}
+
+
+#site-footer{
+    background-color: #7a7676;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+    
