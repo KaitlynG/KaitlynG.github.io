@@ -3,7 +3,7 @@
     border: 1px solid #ccccccfd;
     padding: 20px;
     margin-top: 20px;
-    background-color: #989696;
+    background-color: #848C8E;
     box-sizing: content-box;
     font-family: Arial, sans-serif;
 }
@@ -13,17 +13,23 @@
     text-align:center;
     font-family: Arial, sans-serif;
 }
+
 .framedImage{
     padding: 10px;
     margin: 0px;
-    max-width: 100%;
-    float: left;
+    box-sizing: content-box;
+    float: Left;
+    max-height: 550px;
+}
+
+.projectLinks{
+    text-align: center;
 }
 
 /*ID selectors */
 #main-header { 
-    background-color: #333;
-    color: #fff;
+    background-color: #435058;
+    color: #F1F2EE;
     padding: 20px;
     text-align: center;
     font-size: 40px;
@@ -32,8 +38,9 @@
 
 
 #site-footer{
-    background-color: #7a7676;
-    color: #fff;
+    clear: both;
+    background-color: #DCF763;
+    color: #00000000;
     padding: 20px;
     text-align: center;
 }
