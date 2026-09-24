@@ -1,21 +1,46 @@
-/* Do everything in this file */
-h2{
-    border-bottom: 1px solid rgb(200, 0, 0);
-    clear: both;
-}
-
 figure{
-    float: right;
-    width: 40%;
+    display: flexbox;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 figure.img{
-    width: fit-content;
-    margin: 20px;
+    width: 100%;
 }
 
-div{
-    float: left;
-    width: 15%;
-    border: 2px solid black;
+header, main, footer{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tet{
+    flex: 1 0 450px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.tet svg{
+    width: 60%;
+    height: auto;
+}
+
+.name{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.aliases {
+    text-align: left;
+    margin: 1em;
+}
+
+
+#tetlist{
+    display: flex;
+    flex-flow: row wrap;
 }
