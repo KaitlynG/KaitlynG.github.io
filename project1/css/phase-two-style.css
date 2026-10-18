@@ -1,0 +1,137 @@
+
+
+body{
+    display: grid;
+    max-width: 100vw;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "about-me "
+        "image1"
+        "project-start"
+        "project1" 
+        "project1-image"
+        "project2"
+        "project2-image "
+        "contact";
+    grid-template-columns: 50vw;
+    margin: 0 20vw;
+    grid-template-rows: 10vh 5vh auto auto auto auto auto  auto auto 5vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+@media screen and (width >= 1200px){
+body{
+    grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "about-me image1"
+        "project-start project-start"
+        "project1 project1-image"
+        "project2-image project2"
+        "contact contact";
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr, 10vh 0.5fr, 0.75fr, 0.75fr, 1fr, 10vh;
+
+}
+}
+
+nav{
+    grid-area: navbar;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+a {
+    color:rgb(183, 0, 255);
+}
+
+p {
+    font-family: "Monaco", monospace;
+}
+
+header{
+    margin: none;
+    grid-area: header;
+    align-self: center;
+    text-align: center;
+    background-color: #66adbe;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+}
+
+footer{
+    grid-area: contact;
+    background-color: darkslategrey;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a{
+    color: whitesmoke;
+}
+
+
+#project1{
+    grid-area: project1;
+    margin: 10px 10px;
+}
+
+#project2{
+    grid-area: project2;
+}
+
+#project1Image{
+    grid-area: project1-image;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#project1Image img{
+    max-width: 400px;
+
+}
+
+#project2Image{
+    grid-area: project2-image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#project2Image img{
+    max-width: 400px;
+    height: auto;
+}
+
+.project{
+    display: block;
+    background-color: #9eadb1;
+    text-align: left;
+    font-family: "Monaco", monospace;
+    padding: 0 5%;
+}
+
+
+.project h3{
+    font-weight: 1.5rem;
+}
+
+#aboutMe{
+    grid-area: about-me;
+}
+
+#portrait{
+    grid-area: image1;
+    padding: 5%;
+}
+
+#projectHeading {
+    grid-area: project-start;
+}
+
+
