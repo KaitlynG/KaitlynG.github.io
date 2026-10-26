@@ -31,6 +31,25 @@
   //3) Change the .innerHTML of the 2nd <h2> to "My UFO Pictures"
   document.querySelector("h2:nth-of-type(2)").innerHTML = "My UFO Pictures";
 
+  //4) Change the .innerHTML of the 3rd <h2> to an empty string - ""
+  document.querySelector("h2:nth-of-type(3)").innerHTML = "";
+
+  //5) Make style changes to the body element
+  let body = document.body
+  body.style = "font-family: sans-serif; color: #880808;";
+
+  //6) Select the first paragraph and make some changes
+  let p = document.querySelector("p");
+  p.style = "font-weight: bold; color: green; font-size: 2em; text-transform: uppercase; text-shadow: 3px 2px #A44;";
+
+  //7) Change the .innerHTML of the 2nd paragraph to an empty string - ""
+  document.querySelector("p:nth-of-type(2)").innerHTML = "";
+
+  //8) Change the .innerHTML of the 3rd paragraph to instead show an image of a UFO that is out on the web (use an <img> tag)
+  document.querySelector("p:nth-of-type(3)").innerHTML = "<img src='data:image/jpeg;base64,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' alt='UFO image'>"
+
+  //9) Change the .innerHTML of the <footer> copyright notice to show the current year and your name(s).
+  document.querySelector("footer").innerHTML = "&copy;2026 Kaitlyn Gray"
 	
 	</script>
 </body>
