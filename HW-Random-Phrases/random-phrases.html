@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrayKids Phrases</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>The wise words of StrayKids</h1>
+    </header>
+
+    <main>
+        <!--Random phrase-->
+        <p></p>
+
+        <button class="button-53" role="button">Randomize</button>
+    </main>
+
+    <footer>
+        <p><i>By: Kaitlyn Gray</i></p>
+    </footer>
+
+    <script>
+        "use strict";
+
+        let quoteArray = ["Chicken... Chicken has MEAT in it!", "Seungmin in the building!",
+        "If the mitochondria is the powerhouse of the cell, then music is what powerhouses us through hell.", 
+        "Everything tastes good when fried. Even a shoe.", 
+        "Theres a piece of pineapple... in my burgar.",
+        "Oi Felix! Come here bro!",
+        "Aussie aussie aussie, oi oi oi!"
+        ]
+
+        function displayQuote(){
+            let quote = document.querySelector("p");
+            quote.innerHTML = quoteArray[Math.floor(Math.random() * quoteArray.length)];
+            console.log(Math.floor(Math.random() * quoteArray.length));
+            
+        }
+
+        
+        document.querySelector("button").onclick = displayQuote;
+        window.onload = displayQuote;
+    </script>
+</body>
+</html>
