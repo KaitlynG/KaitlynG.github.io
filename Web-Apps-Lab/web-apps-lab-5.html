@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-5</title>
+	<style>
+		body{
+			font-family:sans-serif;
+		}
+		#colorform{
+			background-color:#dfecdf;
+			color: #111;
+			padding:1em;width:400px;
+		}
+		#colorform p#info{
+			background-color:white;
+			color: black;
+			width:300px;
+			height:100px;
+			padding:.5em;
+		}
+		
+		#colorform legend{ 
+			font-weight:bold;
+			font-size:1.2em;
+		}
+	</style>
+</head>
+<body>
+
+<div id="colorform">
+	<legend>Choose your favorite color!</legend>
+	<p><input type="radio" name="colorGroup" id="colorGroupRed" value="red" /> Red</p>
+	<p><input type="radio" name="colorGroup" id="colorGroupGreen" value="green" /> Green</p>
+	<p><input type="radio" name="colorGroup" id="colorGroupBlue" value="blue" /> Blue</p>
+	<p><button id="colorButton" type="button">Submit</button></p>
+	<p id="info"></p>
+</div>
+
+<script>
+/* Write your code here! */
+    let radioButtons = document.querySelectorAll("input");
+
+    let OnSelect = (e) => {
+        let infoBox = document.querySelector("#info");
+        let colorChosen = e.target.value;
+        infoBox.innerHTML = "You have selected " + colorChosen;
+    }
+
+    let Submit = (e) => {
+        let checkedColor;
+        for(element of radioButtons){
+            if(element.checked){
+                checkedColor = element.value;
+            }
+        }
+
+        document.querySelector("#info").innerHTML = "Your FINAL CHOICE is " + checkedColor;
+        document.querySelector("legend").style = "color: " + checkedColor;
+    }
+
+    //Loop through all buttons and add functionality when selected
+    for(let element of radioButtons){
+        element.onchange = OnSelect;
+    }
+
+    //Submit button functionality
+    document.querySelector("#colorButton").onclick = Submit;
+
+
+</script>
+</body>
+</html>
