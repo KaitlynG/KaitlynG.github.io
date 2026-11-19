@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+ 	<title>Dog Finder</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+
+    <script src="main.js"> </script>
+
+</head>
+<body>
+<header>
+ <h1>Dog Finder</h1>
+</header>
+<div class="grid-container">
+    
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+        <div class="mobile-menu">☰ Menu</div> 
+        
+        <div id="pull-out-menu">
+            <ul id="breed-list">
+                <li><div class="single-breed">Loading menu...</div></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-section">
+        <input type="text" class="search-bar" placeholder="Type a breed and press Enter...">
+    </div>
+
+    <!-- Random Breed -->
+    <div class="random-section">
+        <button class="random-breed green">Get Random Dogs!</button>
+    </div>
+
+    <!-- Recent Searches Left -->
+    <aside class="recent-searches left">
+        <h3>Recent Searches</h3>
+        <ul>
+            <!-- Temp Options -->
+            <li onclick="searchBreed('retriever/golden')">Golden Retriever</li>
+            <li onclick="searchBreed('pug')">Pug</li>
+            <li onclick="searchBreed('husky')">Husky</li>
+        </ul>
+    </aside>
+
+    <!-- Content / Image Results -->
+    <main class="content-area">
+        <p id="status">Use the menu, search bar, or recent searches to find dogs!</p>
+        
+        <div id="content">
+
+        </div>
+    </main>
+
+    <!-- Recent Searches Right -->
+    <aside class="recent-searches right">
+        <h3>Recent Searches</h3>
+        <ul>
+            <!-- Temp Options -->
+            <li onclick="searchBreed('corgi')">Corgi</li>
+            <li onclick="searchBreed('hound/blood')">Bloodhound</li>
+            <li onclick="searchBreed('dalmatian')">Dalmatian</li>
+        </ul>
+    </aside>
+    
+</div>
+ 
+</body>
+</html>
