@@ -14,6 +14,12 @@ function init(){
     document.querySelector(".search-bar").addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
             let term = this.value.trim().toLowerCase();
+            //if(term.includes(" ")){
+            //    let firstHalf = term.substring(0, term.indexOf(" "));
+            //    let secondHalf = term.substring(term.indexOf(" ") + 1);
+            //    term = firstHalf + " " + secondHalf;
+            //}
+
             if(term) searchBreed(term);
         }
     });
@@ -35,7 +41,7 @@ function loadBreeds() {
                 menuHtml += `
                 <li>
                     <details>
-                        <summary onclick="searchBreed('${breed}')">${breed} ▾</summary>
+                        <summary onhover="searchBreed('${breed}')">${breed} ▾</summary>
                         <ul class="sub-menu">`;
                 for(let i=0; i < subBreeds.length; i++) {
                     menuHtml += `<li onclick="searchBreed('${breed}/${subBreeds[i]}')">${subBreeds[i]} ${breed}</li>`;
@@ -59,7 +65,7 @@ function searchBreed(breedPath){
     const url = "https://dog.ceo/api/breed/" + breedPath + "/images";
     document.querySelector("#status").innerHTML = `Showing results for: <b>${breedPath.replace("/"," ")}</b>`;
     
-    fetchImages(url, breedPath.replace("/", " "));
+    fetchImages(url);
 }
 
 // Fetch completely random dog images
@@ -69,10 +75,11 @@ function fetchRandom() {
 }
 
 // Helper function to process the API request
-function fetchImages(url, label) {
+function fetchImages(url) {
     let xhr = new XMLHttpRequest();
+
     // Pass the label to dataLoaded so it can display the text under the image
-    xhr.onload = function(e) { dataLoaded(e, label); };
+    xhr.onload = function(e) { dataLoaded(e); };
     xhr.onerror = function() {
         document.querySelector("#content").innerHTML = "<p><i>Network error occurred.</i></p>";
     };
@@ -81,7 +88,7 @@ function fetchImages(url, label) {
 }
 
 // Display the results
-function dataLoaded(e, label){
+function dataLoaded(e){
     let xhr = e.target;
     let obj = JSON.parse(xhr.responseText);
     
